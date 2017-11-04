@@ -9,28 +9,28 @@ No other box can have those two numbers that naked twins contain and mainly nake
 
 Strategy is Find the twin boxe with same two identical values in samee unit and eliminate these two in other boxes of same unit of twin boxes.
 
- a. Search for the posssible values [Lenth =2]
- b. Identify naked twins [Length of possibility of box == 2 and Value[box1] == Value [box2]]
- c. Using the Set Intersection [py .interstion func] to find common peers of both boxes.
- d. For each naked twin,
-    * Iterate through unit in unitlist with exception of naked twins.
-    * Remove those two in naked twins from others in unit list.
-    * [Remove mean Replace the digit with ''].
+ 1. Search for the posssible values [Lenth =2]
+ 2. Identify naked twins [Length of possibility of box == 2 and Value[box1] == Value [box2]]
+ 3. Using the Set Intersection [py .interstion func] to find common peers of both boxes.
+ 4. For each naked twin,
+    1. Iterate through unit in unitlist with exception of naked twins.
+    2. Remove those two in naked twins from others in unit list.
+    3. [Remove mean Replace the digit with ''].
 
 Search for Reduce Puzzle :
 
- a. If False already then return False. Check for return value if search fail then return fail.
- b. If all the boxes has len of possibilties equal to 1, it implies it solved so Return the values.
+ 1. If False already then return False. Check for return value if search fail then return fail.
+ 2. If all the boxes has len of possibilties equal to 1, it implies it solved so Return the values.
 		Since, Search didn't fail return Succed / Passed.
- c. Find the box wwith least possibilties and set s equal to the box with the least number of possible values.
- d. Iterates over every possible value in the list of possible values stored in values[s].
- e. Copies the board of values. Create a new temp Values is important because if not done, all the changes will become permanent if for any  reason it fail, changes will become permanent.
+ 3. Find the box wwith least possibilties and set s equal to the box with the least number of possible values.
+ 4. Iterates over every possible value in the list of possible values stored in values[s].
+ 5. Copies the board of values. Create a new temp Values is important because if not done, all the changes will become permanent if for any  reason it fail, changes will become permanent.
  Or if any try was not correct then also those changes will become permanent. At nth attmpt if solution was not found then at n+1 th attempt board cannot be used since it was destroyed in previous attempt.
- f. Set new s and Performs a search that tries to solve the Sudoku using this current assignment.
- g. Checks for a return value.
-    i) None if fails [Failed attempt should not be returned since sudoku is not solved yet].
-    ii) If not failed, implies it passed.
-    iii) Find a non-None value and returns if available.
+ 6. Set new s and Performs a search that tries to solve the Sudoku using this current assignment.
+ 7. Checks for a return value.
+    1. None if fails [Failed attempt should not be returned since sudoku is not solved yet].
+    2. If not failed, implies it passed.
+    3. Find a non-None value and returns if available.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?
